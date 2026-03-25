@@ -1,0 +1,1087 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.63 (git sha1 5fd39ff3e, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3)
+
+-- Running command `read_verilog /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v
+hierarchy -check -auto-top
+proc
+opt
+fsm
+opt
+memory
+opt
+synth -auto-top
+abc
+opt
+flatten
+opt
+stat
+check -noinit
+write_verilog /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/u_block_1_syn.v' --
+
+1. Executing Verilog-2005 frontend: /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v
+Parsing Verilog input from `/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v' to AST representation.
+Generating RTLIL representation for module `\u_block_1'.
+Warning: wire '\p_red' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:31.8-31.21.
+Warning: wire '\p_green' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:32.8-32.23.
+Warning: wire '\p_yellow' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:33.8-33.24.
+Warning: wire '\p_red' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:38.9-38.22.
+Warning: wire '\p_green' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:39.9-39.24.
+Warning: wire '\p_yellow' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:40.9-40.25.
+Warning: wire '\p_red' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:45.9-45.22.
+Warning: wire '\p_green' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:46.9-46.24.
+Warning: wire '\p_yellow' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:47.9-47.25.
+Warning: wire '\p_red' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:55.9-55.22.
+Warning: wire '\p_green' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:56.9-56.24.
+Warning: wire '\p_yellow' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:57.9-57.25.
+Warning: wire '\p_red' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:65.9-65.22.
+Warning: wire '\p_green' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:66.9-66.24.
+Warning: wire '\p_yellow' is assigned in a block at /home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:67.9-67.25.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Finding top of design hierarchy..
+root of   0 design levels: u_block_1           
+Automatically selected u_block_1 as design top module.
+
+2.2. Analyzing design hierarchy..
+Top module:  \u_block_1
+
+2.3. Analyzing design hierarchy..
+Top module:  \u_block_1
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 5 switch rules as full_case in process $proc$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:26$1 in module u_block_1.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 4 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\u_block_1.$proc$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:26$1'.
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~4 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\u_block_1.$proc$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:26$1'.
+     1/4: $0\u_block_1_state[1:0]
+     2/4: $0\p_yellow[0:0]
+     3/4: $0\p_green[0:0]
+     4/4: $0\p_red[0:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\u_block_1.\p_green' using process `\u_block_1.$proc$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:26$1'.
+  created $adff cell `$procdff$39' with positive edge clock and positive level reset.
+Creating register for signal `\u_block_1.\p_red' using process `\u_block_1.$proc$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:26$1'.
+  created $adff cell `$procdff$44' with positive edge clock and positive level reset.
+Creating register for signal `\u_block_1.\p_yellow' using process `\u_block_1.$proc$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:26$1'.
+  created $adff cell `$procdff$49' with positive edge clock and positive level reset.
+Creating register for signal `\u_block_1.\u_block_1_state' using process `\u_block_1.$proc$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:26$1'.
+  created $adff cell `$procdff$54' with positive edge clock and positive level reset.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 4 empty switches in `\u_block_1.$proc$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:26$1'.
+Removing empty process `u_block_1.$proc$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:26$1'.
+Cleaned up 4 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+<suppressed ~12 debug messages>
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 35 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Computing hashes of 18 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+<suppressed ~51 debug messages>
+Removed a total of 17 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~11 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+    New ctrl vector for $pmux cell $procmux$20: { $procmux$32_CMP $auto$opt_reduce.cc:137:opt_pmux$56 }
+    New ctrl vector for $pmux cell $procmux$30: { $procmux$33_CMP $auto$opt_reduce.cc:137:opt_pmux$58 }
+    New ctrl vector for $pmux cell $procmux$25: { $auto$opt_reduce.cc:137:opt_pmux$60 $procmux$31_CMP }
+  Optimizing cells in module \u_block_1.
+Performed a total of 3 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+4.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+Removed 2 unused cells and 30 unused wires.
+<suppressed ~3 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~11 debug messages>
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+Performed a total of 0 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 19 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+4.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+4.16. Finished fast OPT passes. (There is nothing left to do.)
+
+5. Executing FSM pass (extract and optimize FSM).
+
+5.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register u_block_1.u_block_1_state.
+
+5.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\u_block_1_state' from module `\u_block_1'.
+  found $adff cell for state register: $procdff$54
+  root of input selection tree: $0\u_block_1_state[1:0]
+  found reset state: 2'00 (from async reset)
+  found ctrl input: $procmux$10_CMP
+  found ctrl input: $procmux$14_CMP
+  found ctrl input: $procmux$18_CMP
+  found ctrl input: $procmux$19_CMP
+  found ctrl input: $eq$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:48$3_Y
+  found state code: 2'11
+  found state code: 2'10
+  found state code: 2'01
+  found ctrl output: $procmux$10_CMP
+  found ctrl output: $procmux$14_CMP
+  found ctrl output: $procmux$18_CMP
+  found ctrl output: $procmux$19_CMP
+  ctrl inputs: $eq$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:48$3_Y
+  ctrl outputs: { $procmux$19_CMP $procmux$18_CMP $procmux$14_CMP $procmux$10_CMP $0\u_block_1_state[1:0] }
+  transition:       2'00 1'- ->       2'01 6'100001
+  transition:       2'10 1'0 ->       2'10 6'001010
+  transition:       2'10 1'1 ->       2'01 6'001001
+  transition:       2'01 1'0 ->       2'01 6'010001
+  transition:       2'01 1'1 ->       2'11 6'010011
+  transition:       2'11 1'0 ->       2'11 6'000111
+  transition:       2'11 1'1 ->       2'10 6'000110
+
+5.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\u_block_1_state$61' from module `\u_block_1'.
+
+5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+Removed 9 unused cells and 9 unused wires.
+<suppressed ~10 debug messages>
+
+5.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\u_block_1_state$61' from module `\u_block_1'.
+  Removing unused output signal $0\u_block_1_state[1:0] [0].
+  Removing unused output signal $0\u_block_1_state[1:0] [1].
+
+5.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\u_block_1_state$61' from module `\u_block_1' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00 -> ---1
+  10 -> --1-
+  01 -> -1--
+  11 -> 1---
+
+5.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\u_block_1_state$61' from module `u_block_1':
+-------------------------------------
+
+  Information on FSM $fsm$\u_block_1_state$61 (\u_block_1_state):
+
+  Number of input signals:    1
+  Number of output signals:   4
+  Number of state bits:       4
+
+  Input signals:
+    0: $eq$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:48$3_Y
+
+  Output signals:
+    0: $procmux$10_CMP
+    1: $procmux$14_CMP
+    2: $procmux$18_CMP
+    3: $procmux$19_CMP
+
+  State encoding:
+    0:     4'---1  <RESET STATE>
+    1:     4'--1-
+    2:     4'-1--
+    3:     4'1---
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 1'-   ->     2 4'1000
+      1:     1 1'0   ->     1 4'0010
+      2:     1 1'1   ->     2 4'0010
+      3:     2 1'0   ->     2 4'0100
+      4:     2 1'1   ->     3 4'0100
+      5:     3 1'1   ->     1 4'0001
+      6:     3 1'0   ->     3 4'0001
+
+-------------------------------------
+
+5.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\u_block_1_state$61' from module `\u_block_1'.
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+<suppressed ~6 debug messages>
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 23 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+Performed a total of 0 changes.
+
+6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+Removed 0 unused cells and 12 unused wires.
+<suppressed ~1 debug messages>
+
+6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+Performed a total of 0 changes.
+
+6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+7. Executing MEMORY pass.
+
+7.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+7.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+7.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+7.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+7.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+7.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+7.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+7.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+7.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+8. Executing OPT pass (performing simple optimizations).
+
+8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+Performed a total of 0 changes.
+
+8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+8.9. Finished fast OPT passes. (There is nothing left to do.)
+
+9. Executing SYNTH pass.
+
+9.1. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `u_block_1'. Setting top module to u_block_1.
+
+9.1.1. Analyzing design hierarchy..
+Top module:  \u_block_1
+
+9.1.2. Analyzing design hierarchy..
+Top module:  \u_block_1
+Removed 0 unused modules.
+
+9.2. Executing PROC pass (convert processes to netlists).
+
+9.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+9.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+9.2.4. Executing PROC_INIT pass (extract init attributes).
+
+9.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+9.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+9.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+9.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+9.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+9.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+9.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+9.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+9.5. Executing CHECK pass (checking for obvious problems).
+Checking module u_block_1...
+Found and reported 0 problems.
+
+9.6. Executing OPT pass (performing simple optimizations).
+
+9.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+9.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+9.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+9.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+Performed a total of 0 changes.
+
+9.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+9.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+9.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+9.6.9. Finished fast OPT passes. (There is nothing left to do.)
+
+9.7. Executing FSM pass (extract and optimize FSM).
+
+9.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+9.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+9.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+9.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+9.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+9.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+9.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+9.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+9.8. Executing OPT pass (performing simple optimizations).
+
+9.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+9.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+9.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+9.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+Performed a total of 0 changes.
+
+9.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+9.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+9.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+9.8.9. Finished fast OPT passes. (There is nothing left to do.)
+
+9.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 6 bits (of 8) from port B of cell u_block_1.$eq$/home/openclawer/Projects/Partition/workspace/optimization_176e00d2/yosys_opt_record/20260320_043008/001_u_block_1/maro_temp/circuit.v:68$5 ($eq).
+
+9.10. Executing PEEPOPT pass (run peephole optimizers).
+
+9.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+9.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module u_block_1:
+  created 0 $alu and 0 $macc cells.
+
+9.13. Executing SHARE pass (SAT-based resource sharing).
+
+9.14. Executing OPT pass (performing simple optimizations).
+
+9.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+9.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+9.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+9.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+Performed a total of 0 changes.
+
+9.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+9.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+9.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+9.14.9. Finished fast OPT passes. (There is nothing left to do.)
+
+9.15. Executing MEMORY pass.
+
+9.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+9.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+9.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+9.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+9.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+9.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+9.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+9.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+9.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+9.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+9.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+9.17. Executing OPT pass (performing simple optimizations).
+
+9.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+<suppressed ~5 debug messages>
+
+9.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 20 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+9.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+Removed 1 unused cells and 2 unused wires.
+<suppressed ~2 debug messages>
+
+9.17.5. Finished fast OPT passes.
+
+9.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+9.19. Executing OPT pass (performing simple optimizations).
+
+9.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+9.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 19 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+9.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+9.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+Performed a total of 0 changes.
+
+9.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 19 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+9.19.6. Executing OPT_SHARE pass.
+
+9.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+9.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+9.19.10. Finished fast OPT passes. (There is nothing left to do.)
+
+9.20. Executing TECHMAP pass (map to technology primitives).
+
+9.20.1. Executing Verilog-2005 frontend: /home/openclawer/EDATools/yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/openclawer/EDATools/yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+9.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $eq.
+No more expansions possible.
+<suppressed ~96 debug messages>
+
+9.21. Executing OPT pass (performing simple optimizations).
+
+9.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+<suppressed ~9 debug messages>
+
+9.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 33 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+9.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+Removed 0 unused cells and 8 unused wires.
+<suppressed ~1 debug messages>
+
+9.21.5. Finished fast OPT passes.
+
+9.22. Executing ABC pass (technology mapping using ABC).
+
+9.22.1. Extracting gate netlist of module `\u_block_1' to `<abc-temp-dir>/input.blif'..
+
+9.22.1.1. Executed ABC.
+Extracted 26 gates and 38 wires to a netlist network with 12 inputs and 5 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Mar 20 2026 01:42:39)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+9.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        4
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               MUX cells:        3
+ABC RESULTS:               NOR cells:        4
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:       21
+ABC RESULTS:           input signals:       12
+ABC RESULTS:          output signals:        5
+Removing temp directory.
+Removing global temp directory.
+
+9.23. Executing OPT pass (performing simple optimizations).
+
+9.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+9.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+9.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+Removed 0 unused cells and 32 unused wires.
+<suppressed ~1 debug messages>
+
+9.23.5. Finished fast OPT passes.
+
+9.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `u_block_1'. Setting top module to u_block_1.
+
+9.24.1. Analyzing design hierarchy..
+Top module:  \u_block_1
+
+9.24.2. Analyzing design hierarchy..
+Top module:  \u_block_1
+Removed 0 unused modules.
+
+9.25. Printing statistics.
+
+=== u_block_1 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       25 wires
+       35 wire bits
+       11 public wires
+       21 public wire bits
+       10 ports
+       17 port bits
+       21 cells
+        2   $_ANDNOT_
+        4   $_AND_
+        6   $_DFF_PN0_
+        1   $_DFF_PN1_
+        3   $_MUX_
+        4   $_NOR_
+        1   $_OR_
+
+9.26. Executing CHECK pass (checking for obvious problems).
+Checking module u_block_1...
+Found and reported 0 problems.
+
+10. Executing ABC pass (technology mapping using ABC).
+
+10.1. Extracting gate netlist of module `\u_block_1' to `<abc-temp-dir>/input.blif'..
+
+10.1.1. Executed ABC.
+Extracted 14 gates and 26 wires to a netlist network with 12 inputs and 5 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Mar 20 2026 01:42:39)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+10.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        4
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               MUX cells:        3
+ABC RESULTS:               NOR cells:        4
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        9
+ABC RESULTS:           input signals:       12
+ABC RESULTS:          output signals:        5
+Removing temp directory.
+Removing global temp directory.
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+Removed 0 unused cells and 26 unused wires.
+<suppressed ~1 debug messages>
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 21 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:337:slice$191 ($_DFF_PN0_) from module u_block_1 (D = \u_block_1_state [2], Q = \u_block_1_state [3]).
+Adding EN signal on $auto$ff.cc:337:slice$189 ($_DFF_PN0_) from module u_block_1 (D = \u_block_1_state [3], Q = \u_block_1_state [1]).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+11.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+Performed a total of 0 changes.
+
+11.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 19 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+11.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+11.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+11.23. Finished fast OPT passes. (There is nothing left to do.)
+
+12. Executing FLATTEN pass (flatten design).
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 19 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \u_block_1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \u_block_1.
+Performed a total of 0 changes.
+
+13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\u_block_1'.
+Computing hashes of 19 cells of `\u_block_1'.
+Finding duplicate cells in `\u_block_1'.
+Removed a total of 0 cells.
+
+13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \u_block_1..
+
+13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module u_block_1.
+
+13.9. Finished fast OPT passes. (There is nothing left to do.)
+
+14. Printing statistics.
+
+=== u_block_1 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       23 wires
+       33 wire bits
+       11 public wires
+       21 public wire bits
+       10 ports
+       17 port bits
+       19 cells
+        2   $_ANDNOT_
+        4   $_AND_
+        2   $_DFFE_PN0P_
+        4   $_DFF_PN0_
+        1   $_DFF_PN1_
+        1   $_MUX_
+        4   $_NOR_
+        1   $_OR_
+
+15. Executing CHECK pass (checking for obvious problems).
+Checking module u_block_1...
+Found and reported 0 problems.
+
+16. Executing Verilog backend.
+
+16.1. Executing BMUXMAP pass.
+
+16.2. Executing DEMUXMAP pass.
+Dumping module `\u_block_1'.
+
+Warnings: 15 unique messages, 15 total
+End of script. Logfile hash: f7be252dde, time: 0.07s, user: 0.01s, system: 0.02s, MEM: 665.88 MB peak
+Yosys 0.63 (git sha1 5fd39ff3e, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3)
+Time spent: 69% 2x abc (0 sec), 8% 3x read_verilog (0 sec), ...

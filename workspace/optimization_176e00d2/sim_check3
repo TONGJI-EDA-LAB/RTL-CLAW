@@ -1,0 +1,55 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/home/openclawer/EDATools/iverilog/usr/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/home/openclawer/EDATools/iverilog/usr/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/home/openclawer/EDATools/iverilog/usr/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/home/openclawer/EDATools/iverilog/usr/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/home/openclawer/EDATools/iverilog/usr/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/home/openclawer/EDATools/iverilog/usr/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x60118a190e30 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x60118a190fc0 .scope module, "u_block_3" "u_block_3" 3 4;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst_n";
+    .port_info 2 /OUTPUT 1 "green";
+    .port_info 3 /OUTPUT 1 "red";
+    .port_info 4 /OUTPUT 1 "yellow";
+P_0x60118a1b7560 .param/l "idle" 0 3 13, C4<00>;
+P_0x60118a1b75a0 .param/l "s1_red" 0 3 14, C4<01>;
+P_0x60118a1b75e0 .param/l "s2_yellow" 0 3 15, C4<10>;
+P_0x60118a1b7620 .param/l "s3_green" 0 3 16, C4<11>;
+o0x7d60647cf018 .functor BUFZ 1, C4<z>; HiZ drive
+v0x60118a191150_0 .net "clk", 0 0, o0x7d60647cf018;  0 drivers
+v0x60118a1da080_0 .var "green", 0 0;
+v0x60118a1da140_0 .var "red", 0 0;
+o0x7d60647cf0a8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x60118a1da210_0 .net "rst_n", 0 0, o0x7d60647cf0a8;  0 drivers
+v0x60118a1da2d0_0 .var "yellow", 0 0;
+E_0x60118a1913b0/0 .event negedge, v0x60118a1da210_0;
+E_0x60118a1913b0/1 .event posedge, v0x60118a191150_0;
+E_0x60118a1913b0 .event/or E_0x60118a1913b0/0, E_0x60118a1913b0/1;
+    .scope S_0x60118a190fc0;
+T_0 ;
+    %wait E_0x60118a1913b0;
+    %load/vec4 v0x60118a1da210_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x60118a1da2d0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x60118a1da140_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x60118a1da080_0, 0;
+T_0.0 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "partition_opt/u_block_3.v";
