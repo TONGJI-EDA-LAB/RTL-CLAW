@@ -1,27 +1,65 @@
+
 <div align="left">
-  <img src="./tongji_logo.png" alt="Tongji University Logo" width="100"/>
-  <img src="./cu_logo.jpg" alt="CUHK Logo" width="120"/>
+  <img src="assets/tongji_logo.png" alt="Tongji University Logo" width="110"/>
+  <img src="assets/cu_logo.jpg" alt="The Chinese University of Hong Kong Logo" width="110"/>
 </div>
 
 # RTL-CLAW: An AI-Agent-Driven Framework for Automated IC Design Flow
 
 > A collaborative project between **Tongji EDA Lab** and **The Chinese University of Hong Kong (CUHK)**  
-> **Project Leader:** Yuyang Ye
+> **Project Lead:** Yuyang Ye
 
-This project is primarily aimed at showcasing an EDA toolchain based on the OpenClaw framework, in which our own research work is also demonstrated. The project will be continuously updated to support the integration of more of our research outcomes, open-source tools, and commercial tools into the toolchain in the form of additional plugins.
+RTL-CLAW is a research-oriented EDA toolchain built on top of the OpenClaw framework. It is designed to showcase an AI-agent-driven workflow for automated IC design, while also serving as a platform for integrating our research outcomes, open-source tools, and commercial EDA tools into the toolchain through extensible plugins.
 
-If you have any questions, please feel free to submit an issue to help us improve!
+This project will be continuously updated to support the integration of more research outcomes, open-source tools, and commercial EDA tools.
 
-## Setup Instructions
+If you have any questions, suggestions, or feature requests, please feel free to submit an issue. Your feedback will help us improve the project.
 
-**1st.** This image is built locally based on the official OpenClaw image. Please follow the OpenClaw official repository to build `openclaw:local` locally.
+---
 
-**2nd.** The image build command is:
-`docker build -t rtl-claw:latest-dev .`  
+## Authors
 
-*Note: Some features are not yet publicly available as the related research has not been published.*
+Haotian Yu<sup>1,2</sup>, Yuchen Liu<sup>1</sup>, Qibo Xue<sup>3,4</sup>, Yuan Pu<sup>3,4</sup>, Xufeng Yao<sup>3</sup>, Zhuolun He<sup>3,4</sup>, Yuyang Ye<sup>1,3</sup>, Lei Qiu<sup>1</sup>, Qing He<sup>1,2</sup>, Bei Yu<sup>1</sup>
 
-3rd. Initialize to generate minimal config:
+## Affiliations
+
+<sup>1</sup> Tongji University, Shanghai, China  
+<sup>2</sup> Phlexing Technology Co. Ltd., Hangzhou, China  
+<sup>3</sup> The Chinese University of Hong Kong, China  
+<sup>4</sup> Chateda
+
+---
+
+## Overview
+
+RTL-CLAW is primarily intended to demonstrate an AI-agent-driven IC design flow based on the OpenClaw framework. In addition to the OpenClaw-based infrastructure, this project also serves as a unified platform for showcasing our research work and gradually integrating additional capabilities through plugins.
+
+The long-term goal of RTL-CLAW is to provide an extensible toolchain that supports:
+
+- integration of research prototypes,
+- integration of open-source EDA tools,
+- integration of commercial EDA tools, and
+- rapid experimentation with AI-agent-driven design automation workflows.
+
+> **Note:** Some features are not yet publicly available because the related research has not been published yet.
+
+---
+
+## Prerequisites
+
+1. This image is built locally based on the official OpenClaw image. Please follow the official OpenClaw repository to build `openclaw:local` locally first.
+
+2. Build the RTL-CLAW Docker image with:
+
+```bash
+docker build -t rtl-claw:latest-dev .
+```
+
+---
+
+## Initialize a Minimal Configuration
+
+Run the following command to initialize the environment and generate a minimal configuration:
 
 ```bash
 docker compose run --rm rtl-claw-cli onboard \
@@ -36,11 +74,59 @@ docker compose run --rm rtl-claw-cli onboard \
     --skip-skills
 ```
 
-4th. Start container services:
+---
+
+## Start the Container Services
+
+Create the required local directories and start the gateway service:
 
 ```bash
 mkdir .openclaw/ && mkdir workspace
 docker compose up -d rtl-claw-gateway
 ```
 
-5
+---
+
+## Project Status
+
+RTL-CLAW is currently under active development.
+
+We will continue to expand this toolchain by integrating more research outcomes, additional open-source EDA utilities, selected commercial EDA tool interfaces, and new agent-based workflow plugins.
+
+As the project evolves, the repository structure, supported features, and plugin interfaces may continue to change.
+
+---
+
+## Notes
+
+- This project is intended for research demonstration and framework prototyping.
+- Some modules or plugins may remain unavailable in the public version until the related work is published.
+- The current workflow assumes a local Docker-based environment.
+
+---
+
+## Contributing
+
+Contributions, suggestions, and issue reports are welcome.
+
+If you encounter any problems or would like to suggest improvements, please open an issue in this repository.
+
+---
+
+## Acknowledgements
+
+RTL-CLAW is developed as a collaborative effort between **Tongji EDA Lab** and **The Chinese University of Hong Kong (CUHK)**, with the goal of advancing AI-agent-driven IC design automation research and practice.
+
+---
+
+## Citation
+
+If you find this project useful in your research or development, please consider citing the relevant papers or referencing this repository once the associated publications are available.
+
+---
+
+## License
+
+License information will be added later.
+
+如果你发现聊天界面复制这段还是不方便，我下一条直接给你一个 `.md` 文件内容版本，按“BEGIN README / END README” 包起来。
