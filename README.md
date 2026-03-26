@@ -1,7 +1,7 @@
 
 <div align="left">
-  <img src="./tongji_logo.png" alt="Tongji University Logo" width="110"/>
-  <img src="./cu_logo.jpg" alt="The Chinese University of Hong Kong Logo" width="110"/>
+  <img src="./tongji_logo.png" alt="Tongji University Logo" width="100"/>
+  <img src="./cu_logo.jpg" alt="The Chinese University of Hong Kong Logo" width="120"/>
 </div>
 
 # RTL-CLAW: An AI-Agent-Driven Framework for Automated IC Design Flow
