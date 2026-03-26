@@ -19,13 +19,13 @@ If you have any questions, suggestions, or feature requests, please feel free to
 
 ## Authors
 
-Haotian Yu<sup>1,2</sup>, Yuchen Liu<sup>1</sup>, Qibo Xue<sup>3,4</sup>, Yuan Pu<sup>3,4</sup>, Xufeng Yao<sup>3</sup>, Zhuolun He<sup>3,4</sup>, Yuyang Ye<sup>1,3</sup>, Lei Qiu<sup>1</sup>, Qing He<sup>1,2</sup>, Bei Yu<sup>1</sup>
+Haotian Yu<sup>1,2</sup>, Yuchen Liu<sup>1</sup>, Qibo Xue<sup>3,4</sup>, Yuan Pu<sup>3,4</sup>, Yuntao Lu<sup>3</sup>, Xufeng Yao<sup>3</sup>, Zhuolun He<sup>3,4</sup>, Yuyang Ye<sup>1,3</sup>, Lei Qiu<sup>1</sup>, Qing He<sup>1,2</sup>, Bei Yu<sup>3</sup>
 
 ## Affiliations
 
 <sup>1</sup> Tongji University, Shanghai, China  
 <sup>2</sup> Phlexing Technology Co. Ltd., Hangzhou, China  
-<sup>3</sup> The Chinese University of Hong Kong, China  
+<sup>3</sup> The Chinese University of Hong Kong, Hong Kong, China  
 <sup>4</sup> Chateda
 
 ---
