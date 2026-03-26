@@ -1,6 +1,6 @@
 services:
   rtl-claw-gateway:
-    image: ${OPENCLAW_IMAGE:-rtl-claw:latest-dev}
+    image: ${OPENCLAW_IMAGE:-tongjieda/rtl-claw:v0.1}
     environment:
       HOME: /home/node
       TERM: xterm-256color
@@ -56,8 +56,8 @@ services:
       start_period: 20s
 
   rtl-claw-cli:
-    image: ${OPENCLAW_IMAGE:-rtl-claw:latest-dev}
-    network_mode: "service:openclaw-gateway"
+    image: ${OPENCLAW_IMAGE:-tongjieda/rtl-claw:v0.1}
+    network_mode: "service:rtl-claw-gateway"
     cap_drop:
       - NET_RAW
       - NET_ADMIN
@@ -81,4 +81,4 @@ services:
     init: true
     entrypoint: ["node", "dist/index.js"]
     depends_on:
-      - openclaw-gateway
+      - rtl-claw-gateway

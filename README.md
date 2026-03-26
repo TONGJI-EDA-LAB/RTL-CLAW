@@ -7,7 +7,7 @@
 # RTL-CLAW: An AI-Agent-Driven Framework for Automated IC Design Flow
 
 > A collaborative project between **Tongji EDA Lab** and **The Chinese University of Hong Kong (CUHK)**  
-> **Project Lead:** Yuyang Ye
+> **Project Leader:** Yuyang Ye
 
 RTL-CLAW is a research-oriented EDA toolchain built on top of the OpenClaw framework. It is designed to showcase an AI-agent-driven workflow for automated IC design, while also serving as a platform for integrating our research outcomes, open-source tools, and commercial EDA tools into the toolchain through extensible plugins.
 
@@ -86,6 +86,25 @@ docker compose up -d rtl-claw-gateway
 ```
 
 ---
+
+
+## Demo Flow
+We will show your a easy demo flow, traffic light.
+
+1. Open your conversation web page at `http://localhost:18789`, locate the generated token in `./openclaw/openclaw.json`, and enter it on the conversation page to complete authentication. If you encounter an issue requiring device approval, execute:  
+   ```bash
+   docker compose run --rm rtl-claw-cli devices list
+   docker compose run --rm rtl-claw-cli devices approve <Request ID>
+   ```
+
+2. **Verilog Partition Functionality**:  
+   Place your Verilog design files under the `workspace` directory (it is recommended to create a new folder within it). In the conversation dialog, enter:  
+   ```
+   Use the verilog-partition module to split /path/to/your/file/traffic.v, and output the results to /path/to/your/output
+   ```
+3. Additional Functional Commands:
+    For other features such as Verilog optimization, testbench generation, and Yosys, simply follow the example in step 2. Further guidance is comming soon.
+
 
 ## Project Status
 
