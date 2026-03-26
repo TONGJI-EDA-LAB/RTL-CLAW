@@ -128,5 +128,3 @@ If you find this project useful in your research or development, please consider
 ## License
 
 License information will be added later.
-
-如果你发现聊天界面复制这段还是不方便，我下一条直接给你一个 `.md` 文件内容版本，按“BEGIN README / END README” 包起来。
