@@ -100,7 +100,7 @@ These directions are part of our ongoing research and engineering efforts, and s
 
 ```bash
 docker build -t rtl-claw:latest-dev .
-
+```
 ---
 
 ## 🚀 Quick Start
@@ -120,14 +120,16 @@ docker compose run --rm rtl-claw-cli onboard \
     --skip-daemon \
     --skip-search \
     --skip-skills
+```
 
-###Start the Container Services
+### Start the Container Services
 Create the required local directories and start the gateway service:
 
 ```bash
 mkdir .openclaw/ && mkdir workspace
 docker compose up -d rtl-claw-gateway
 ```
+
 ---
 
 ## 🧪 Demo
@@ -198,8 +200,17 @@ A more detailed description of the project background, architecture, methodology
 
 ## 📚 Citation
 
-If you find this project useful in your research or development, please consider citing the relevant papers or referencing this repository once the associated publications are available.
+If you find this project useful in your research or development, please consider citing this repository:
 
+```bibtex
+@misc{rtlclaw2026,
+  author       = {Yuyang Ye and Haotian Yu and Yuchen Liu and Yifan Wang and Qibo Xue and Yuan Pu and Shuo Yin and Yuntao Lu and Xufeng Yao and Zhuolun He and Lei Qiu and Qing He and Bei Yu},
+  title        = {{RTL-CLAW}: An {AI-Agent-Driven} Framework for Automated IC Design Flow},
+  year         = {2026},
+  howpublished = {\url{https://github.com/TONGJI-EDA-LAB/RTL-CLAW}},
+  note         = {GitHub repository, accessed 2026-03-27}
+}
+```
 ---
 
 ## 📜 License
