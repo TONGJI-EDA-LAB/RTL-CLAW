@@ -1,7 +1,18 @@
-<div align="left">
-  <img src="./tongji_logo.png" alt="Tongji University Logo" width="100"/>
-  <img src="./cu_logo.jpg" alt="The Chinese University of Hong Kong Logo" width="120"/>
-  <img src="./RTLCLAW_logo.png" alt="RTL-CLAW Logo" width="255" align="right"/>
+<div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./tongji_logo_dark.png">
+    <img src="./tongji_logo.png" alt="Tongji University Logo" height="68"/>
+  </picture>
+
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./cu_logo_dark.png">
+    <img src="./cu_logo.jpg" alt="The Chinese University of Hong Kong Logo" height="68" hspace="10"/>
+  </picture>
+
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./RTLCLAW_logo_dark.png">
+    <img src="./RTLCLAW_logo.png" alt="RTL-CLAW Logo" height="68" align="right"/>
+  </picture>
 </div>
 
 # RTL-CLAW: An AI-Agent-Driven Framework for Automated IC Design Flow
