@@ -1,17 +1,17 @@
 <div>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./tongji_logo_dark.png">
-    <img src="./tongji_logo.png" alt="Tongji University Logo" height="68"/>
+    <img src="./tongji_logo.png" alt="Tongji University Logo" height="86"/>
   </picture>
 
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./cu_logo_dark.png">
-    <img src="./cu_logo.jpg" alt="The Chinese University of Hong Kong Logo" height="68" hspace="10"/>
+    <img src="./cu_logo.jpg" alt="The Chinese University of Hong Kong Logo" height="86" hspace="10"/>
   </picture>
 
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./RTLCLAW_logo_dark.png">
-    <img src="./RTLCLAW_logo.png" alt="RTL-CLAW Logo" height="68" align="right"/>
+    <img src="./RTLCLAW_logo.png" alt="RTL-CLAW Logo" height="86" align="right"/>
   </picture>
 </div>
 
