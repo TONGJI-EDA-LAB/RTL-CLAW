@@ -7,7 +7,7 @@
 # RTL-CLAW: An AI-Agent-Driven Framework for Automated IC Design Flow
 
 > A collaborative project between **Tongji EDA Lab** and **The Chinese University of Hong Kong (CUHK)**  
-> **Project Leader:** Yuyang Ye (ead_tongji@163.com)
+> **Project Leader:** Yuyang Ye (ead_tongji@126.com)
 
 RTL-CLAW is an open-source, research-oriented EDA toolchain built on top of the OpenClaw framework. It aims to demonstrate an AI-agent-driven workflow for automated IC design, while providing an extensible platform for integrating research outcomes, open-source tools, and commercial EDA tools through modular plugins.
 
