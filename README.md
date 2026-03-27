@@ -1,6 +1,6 @@
 <div>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./tongji_logo_dark.png">
+    <source media="(prefers-color-scheme: dark)" srcset="./tongji_logo.png">
     <img src="./tongji_logo.png" alt="Tongji University Logo" height="86"/>
   </picture>
 
