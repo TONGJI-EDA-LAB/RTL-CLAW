@@ -1,24 +1,24 @@
 <div>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./tongji_logo.png">
-    <img src="./tongji_logo.png" alt="Tongji University Logo" height="86"/>
+    <img src="./src/tongji_logo.png" alt="Tongji University Logo" height="86"/>
   </picture>
 
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./cu_logo_dark.png">
-    <img src="./cu_logo.jpg" alt="The Chinese University of Hong Kong Logo" height="86" hspace="10"/>
+    <img src="./src/cu_logo.jpg" alt="The Chinese University of Hong Kong Logo" height="86" hspace="10"/>
   </picture>
 
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./RTLCLAW_logo_dark.png">
-    <img src="./RTLCLAW_logo.png" alt="RTL-CLAW Logo" height="86" align="right"/>
+    <img src="./src/RTLCLAW_logo.png" alt="RTL-CLAW Logo" height="86" align="right"/>
   </picture>
 </div>
 
 # RTL-CLAW: An AI-Agent-Driven Framework for Automated IC Design Flow
 
 > A collaborative project between **Tongji EDA Lab** and **The Chinese University of Hong Kong (CUHK)**  
-> **Project Leader:** Yuyang Ye (eda_tongji@126.com)
+> **Project Leader:** Yuyang Ye (lab@tongjieda.cn)
 
 RTL-CLAW is an open-source, research-oriented EDA toolchain built on top of the OpenClaw framework. It aims to demonstrate an AI-agent-driven workflow for automated IC design, while providing an extensible platform for integrating research outcomes, open-source tools, and commercial EDA tools through modular plugins.
 
